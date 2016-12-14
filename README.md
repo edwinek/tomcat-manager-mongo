@@ -8,7 +8,7 @@ An (almost) configuration-less setup for fast Tomcat / Mongo DB development.
 * I find the Maven Tomcat plugin works really well when developing / testing
 
 ## What?
-This is a simple BASH script that creates a couple of Docker containers, that will provide a Tomcat 8 instance, including the Manager (username / password : admin / admin), with a linked Mongo DB server.
+This is a simple BASH script that creates a couple of Docker containers, that will provide a Tomcat 8 instance, including the Manager (username / password : admin / admin), with a linked Mongo DB server. The DockerHub projects that the Dockerfiles pull from are worth having a look at to get more of an understanding of how these technologies hang together.
 
 ## How?
 1. Ensure the following sections exists the Maven ```settings.xml``` on the host machine:
