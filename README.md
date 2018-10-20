@@ -11,22 +11,12 @@ An (almost) configuration-less setup for fast Tomcat / Mongo DB development.
 This is a simple BASH script that creates a couple of Docker containers, that will provide a Tomcat 8 instance, including the Manager (username / password : admin / admin), with a linked Mongo DB server. The DockerHub projects that the Dockerfiles pull from are worth having a look at to get more of an understanding of how these technologies hang together.
 
 ## How?
-1. Ensure the following sections exists the Maven ```settings.xml``` on the host machine:
-```
-<servers>
-    <server>
-        <id>TomcatServer</id>
-		    <username>admin</username>
-		    <password>admin</password>
-    </server>
-</servers>
-````
-2. ```chmod +x deploy.sh```
-3. ```./deploy.sh```
-4. Once the Docker deployment has completed, Tomcat will log to the terminal.
-5. You can now connect to the Mongo DB instance using the Mongo DB Shell client if you have it installed on your host machine, ```mongo```.
-6. You can now connect to the Tomcat 8 Manager on ```http://localhost:8080/manager/html``` (using: admin / admin)
-7. Press ^C when done, to kill Tomcat and clean up the containers.
+1. ```chmod +x deploy.sh```
+2. ```./deploy.sh```
+3. Once the Docker deployment has completed, Tomcat will log to the terminal.
+4. You can now connect to the Mongo DB instance using the Mongo DB Shell client if you have it installed on your host machine, ```mongo```.
+5. You can now connect to the Tomcat 8 Manager on ```http://localhost:8080/manager/html``` (using: admin / admin)
+6. Press ^C when done, to kill Tomcat and clean up the containers.
 
 ## Example with Tomcat plugin for Maven
 1. Clone the ```edwinek/heavyweight``` project, as this has a ```pom.xml``` that's configured to work with this project.
